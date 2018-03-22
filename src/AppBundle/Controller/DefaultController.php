@@ -20,9 +20,9 @@ class DefaultController extends Controller
   /**
    * @Rest\Get("/api")
    */
-    public function indexAction(Request $request)
-    {
-      $data = ['id' => 1];
-      return new JsonResponse($data);
-    }
+  public function indexAction(Request $request)
+  {
+    $data = ['id' => 1];
+    return new JsonResponse($data);
+  }
 }
