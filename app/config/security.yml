@@ -22,10 +22,10 @@ security:
                 authenticator: auth_token_authenticator
             anonymous: ~
             logout:
-                handlers: [logout_listener]            
+                handlers: [logout_listener]
 
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api, role: ROLE_API }
+        - { path: ^/webservice, role: ROLE_API }
