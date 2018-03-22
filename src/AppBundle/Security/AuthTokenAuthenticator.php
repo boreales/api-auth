@@ -28,7 +28,7 @@ class AuthTokenAuthenticator implements SimplePreAuthenticatorInterface, Authent
 
     public function createToken(Request $request, $providerKey)
     {
-
+        $uri = $request->getUri();
         // Si la requête est une création de token, aucune vérification n'est effectuée
         if (strpos($uri,'webservice') === false) {
             return;
