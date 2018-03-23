@@ -48,7 +48,3 @@ services:
         class:     AppBundle\Security\AuthTokenAuthenticator
         arguments: ["@security.http_utils"]
         public:    false
-
-    logout_listener:
-        class: AppBundle\EventListener\LogoutListener
-        arguments: ["@fos_user.user_manager"]
